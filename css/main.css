@@ -7,6 +7,7 @@
 body {
     margin: 0;
     font-family: "Lucida Sans";
+    color: antiquewhite;
     background: radial-gradient(circle, rgba(61, 75, 84, 1) 0%, rgba(82, 71, 82, 1) 50%, rgba(8, 8, 8, 1) 100%);
     align-items: center;
     justify-content: center;
@@ -145,6 +146,29 @@ body p {
         0 0 10px 15px #e297ef;
 }
 
+.header-box {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+    margin-top: 2.5vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 7vh;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 0 2px 5px #cc66c4,
+        0 0 10px 15px #e297ef;
+    min-width: 50%;   
+    max-width: 80%;
+    min-height: 40%;
+    max-height: 50%;
+}
+
+
 .column-grid {
     display: flex;
     flex-direction: column;
@@ -186,6 +210,10 @@ body p {
     overflow-wrap: break-word;
 }
 
+.generic-box:hover{
+    background: rgba(175, 255, 206, 0.15);
+}
+
 .generic-box h1 {
     color: antiquewhite;
     font-weight: light;
@@ -221,6 +249,10 @@ body p {
     overflow-wrap: break-word;
 }
 
+.info-box:hover{
+    background: rgba(240, 175, 255, 0.15);
+}
+
 .info-box h1 {
     color: antiquewhite;
     font-weight: light;
@@ -238,4 +270,18 @@ body p {
 .generic-box,
 .info-box {
     flex: 1 1 250px; /* grow, shrink, base width */
+}
+
+.generic-box:hover,
+.info-box:hover {
+   animation: pulse 5s 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
