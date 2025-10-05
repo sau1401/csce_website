@@ -18,7 +18,7 @@ body {
 }
 
 body h1 {
-    font-family: fantasy;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     text-align: center;
     text-shadow:
@@ -29,7 +29,7 @@ body h1 {
 }
 
 body h2 {
-    font-family: "Franklin Gothic Medium";
+    font-family: monospace;
     font-weight: bold;
     text-align: center;
     text-shadow:
@@ -39,8 +39,16 @@ body h2 {
     font-size: 1.5rem;
 }
 
+body h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 1rem;
+}
+
 body p {
-    font-family: "Franklin Gothic Medium";
+    font-family: monospace;
     font-weight: lighter;
     text-align: center;
     color: antiquewhite;
@@ -131,6 +139,20 @@ body p {
     animation-delay: 4.5s;
 }
 
+hr.neon {
+    width: 60%;
+    border: none;
+    height: 3px;
+    margin: 2rem auto;
+    background: linear-gradient(90deg, #cc66c4, #e297ef);
+    border-radius: 10px;
+    box-shadow:
+        0 0 5px 2px #cc66c4,
+        0 0 10px 4px #e297ef,
+        0 0 20px 8px #e297ef;
+    animation: divider-pulse 5s infinite alternate;
+}
+
 .header {
     text-align: center;
     padding: 2vh;
@@ -157,17 +179,24 @@ body p {
     margin-right: 2.5vw;
     margin-bottom: 7vh;
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 5px;
+    border-radius: 1vh;
     background: rgba(255, 255, 255, 0.15);
     box-shadow:
         0 0 2px 5px #cc66c4,
         0 0 10px 15px #e297ef;
-    min-width: 50%;   
-    max-width: 80%;
-    min-height: 40%;
-    max-height: 50%;
+    min-width: 90%;
+    max-width: 100%;
+    min-height: 2rem;
+    max-height: auto;
 }
 
+.header-box h1 {
+    color: antiquewhite;
+    font-weight: bold;
+    text-shadow:
+        3px 3px rgba(226, 100, 255, 0.41),
+        5px 5px rgba(7, 66, 19, 0.32);
+}
 
 .column-grid {
     display: flex;
@@ -193,7 +222,7 @@ body p {
     display: flexbox;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
     margin: 5rem;
     margin-top: 1.2rem;
     background: rgba(255, 255, 255, 0.15);
@@ -201,6 +230,7 @@ body p {
         0 0 2px 5px #cc66c4,
         0 0 10px 15px #e297ef;
     padding: 0.5rem;
+    border-radius: 1vh;
     cursor: crosshair;
     min-width: 5rem;
     max-width: 100%;
@@ -210,7 +240,7 @@ body p {
     overflow-wrap: break-word;
 }
 
-.generic-box:hover{
+.generic-box:hover {
     background: rgba(175, 255, 206, 0.15);
 }
 
@@ -229,27 +259,27 @@ body p {
 }
 
 .info-box {
-    display: flexbox;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
     text-align: left;
-    margin: 5rem;
-    margin-top: 1.2rem;
+    margin: 2rem auto;
     background: rgba(255, 255, 255, 0.15);
     box-shadow:
         0 0 2px 5px #cc66c4,
         0 0 10px 15px #e297ef;
-    padding: 1rem;
+    border-radius: 1vh;
+    padding: 1.5rem;
     cursor: crosshair;
-    min-width: 10rem;
-    max-width: 100%;
-    min-height: 9rem;
-    max-height: auto;
+    width: fit-content;
+    max-width: 90vw;
+    height: fit-content;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
-.info-box:hover{
+.info-box:hover {
     background: rgba(240, 175, 255, 0.15);
 }
 
@@ -259,12 +289,19 @@ body p {
     text-shadow:
         3px 3px rgba(226, 100, 255, 0.41),
         5px 5px rgba(7, 66, 19, 0.32);
+    padding-bottom: 0.5rem;
+}
+
+.info-box hr {
+    margin-left: 0;  
+    margin-right: auto;
+    width: 50%;       
 }
 
 .info-box h4 {
     color: antiquewhite;
     font-weight: lighter;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 .generic-box,
@@ -274,14 +311,29 @@ body p {
 
 .generic-box:hover,
 .info-box:hover {
-   animation: pulse 5s 1;
+    animation: pulse 5s 1;
 }
 
 @keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes divider-pulse {
+    0%,
+    100% {
+        box-shadow:
+            0 0 5px 2px #cc66c4,
+            0 0 10px 4px #e297ef;
+    }
+    50% {
+        box-shadow:
+            0 0 10px 4px #cc66c4,
+            0 0 25px 10px #e297ef;
+    }
 }
