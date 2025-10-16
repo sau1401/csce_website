@@ -71,7 +71,7 @@ body p {
 
 .star {
     position: absolute;
-    width: 0.5rem;
+    width: 0.1rem;
     aspect-ratio: 1;
     background: rgba(255, 255, 255, 0.8);
     clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
@@ -140,12 +140,18 @@ body p {
     left: 75%;
     animation-delay: 4.5s;
 }
+.star:nth-child(11) {
+    top: 98%;
+    left: 80%;
+    animation-delay: 4.5s;
+}
 
 hr.neon {
     width: 60%;
     border: none;
     height: 3px;
     margin: 2rem auto;
+    text-align: center;
     background: linear-gradient(90deg, #cc66c4, #e297ef);
     border-radius: 10px;
     box-shadow:
