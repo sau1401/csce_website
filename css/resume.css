@@ -1,0 +1,30 @@
+body {
+    font-family: "Lucida Sans";
+    margin: 40px;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+}
+
+.section {
+    margin-top: 25px;
+}
+
+ul {
+    margin: 5px 0 5px 20px;
+}
+
+
+.contact a {
+    color: #0366d6;
+    text-decoration: none;
+    align-content: center;
+}

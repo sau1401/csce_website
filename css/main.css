@@ -278,6 +278,7 @@ hr.neon {
     padding: 0;
     text-align: left;
     color: antiquewhite;
+    font-family: "Lucida Sans";
     font-weight: bold;
     text-shadow:
         3px 3px rgba(226, 100, 255, 0.41),
