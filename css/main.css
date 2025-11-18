@@ -273,6 +273,17 @@ hr.neon {
     padding: 0.5rem;
 }
 
+.generic-box ul{
+    margin: 10px 0 0 20px;
+    padding: 0;
+    text-align: left;
+    color: antiquewhite;
+    font-weight: bold;
+    text-shadow:
+        3px 3px rgba(226, 100, 255, 0.41),
+        5px 5px rgba(7, 66, 19, 0.32);
+}
+
 .info-box {
     display: flex;
     flex-direction: column;
@@ -317,6 +328,14 @@ hr.neon {
     color: antiquewhite;
     font-weight: lighter;
     padding-top: 0.5rem;
+}
+
+.info-box img {
+    max-width: 90%; 
+    max-height: 600px; 
+    object-fit: contain;
+    margin: 0.5rem 0; 
+    border-radius: 0.5rem; 
 }
 
 .generic-box,
